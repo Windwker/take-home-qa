@@ -14,20 +14,21 @@ You will have to fork this repository and create one (or more) PRs again it; we 
 
 Implement and organize an E2E suite test with [Cypress.io](http://cypress.io/) and [Cucumber.io](https://cucumber.io/) to validate the following cases.
 
-- navigate to our landing page located on [https://www.tryminded.com/](https://www.tryminded.com/), validate that the site is fully loaded.
+- navigate to our landing page located on [https://www.tryminded.com/](https://www.tryminded.com/)
+- validate that the site is fully loaded.
 - scroll to the bottom of the page.
 - close the banner "Get your first month for just $25"
 
-[](/assets/25-banner.png)
+![](/assets/25-banner.png)
 
 - unfold the Diagnosis "Anxiety", located in the "What we treat." section and validate the user can read the description
 
-[](/assets/treatment.png)
+![](/assets/treatment.png)
 
 - navigate to the "Locations" section (by clicking the option on the menu)
 - re order the state list by "Name (Z-A)"
 
-[](assets/locations.png)
+![](assets/locations.png)
 
 - select (click) the state "Texas", validate the user is redirected to [https://www.tryminded.com/location/texas](https://www.tryminded.com/location/texas)
 
