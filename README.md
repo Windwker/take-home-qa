@@ -8,7 +8,7 @@ All members of the Engineering team should be able to update and extend your wor
 - well history documentation, small commits and well documented PRs
 - don’t reinvent the wheel
 
-You will have to fork this repository, keep it as private, add [Mauricio](https://github.com/mdottavio) and [Fernando](https://github.com/fer8a) as collaborators and create one (or more) PRs again it;
+You will have to fork this repository, add [Mauricio](https://github.com/mdottavio) and [Fernando](https://github.com/fer8a) as collaborators and create one (or more) PRs again it;
 We appreciate collaboration between team members so, create your first PR as soon as you have something to evaluate (initial setup, folder structure, etc) and expect some feedback on them :)
 
 ### Test description
