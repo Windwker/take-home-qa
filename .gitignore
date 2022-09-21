@@ -10,3 +10,5 @@ dist/
 cypress/videos/
 jsonreport/
 cucumber-messages.ndjson
+cypress/report
+cypress/screenshots
