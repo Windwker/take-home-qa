@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "cypress:runner": "cypress open",
-    "cypress:runChrome": "cypress run --browser chrome"
+    "cypress:runChrome": "cypress run --browser chrome",
+    "cypress:production": "cypress run -e TAGS=@production --browser chrome --headless",
+    "cypress:staging": "cypress run -e TAGS=@staging --browser chrome --headless",
+    "cypress:develompent": "cypress run -e TAGS=@development --browser chrome --headless"
   },
   "repository": {
     "type": "git",
