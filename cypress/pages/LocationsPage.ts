@@ -1,17 +1,15 @@
-import {BasePage} from "./BasePage";
+import { BasePage } from './BasePage'
 
 export class LocationsPage extends BasePage {
-    constructor() {
-        super();
-    }
+  constructor () {
+    super()
+  }
 
-    sortLocations(value: string) {
-        cy.get('#field').select(value);
-    }
+  sortLocations (value: string): void {
+    cy.get('#field').select(value)
+  }
 
-    selectLocation(location: string) {
-        cy.get(".caps").contains(location).click();
-    }
-
-
+  selectLocation (location: string): void {
+    cy.get('.caps').contains(location).click()
+  }
 }

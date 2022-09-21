@@ -21,7 +21,8 @@
     "declarations.d.ts",
     "browserify.ts",
     "esbuild.ts",
-    "webpack.ts"
+    "webpack.ts",
+    "cypress/e2e/step_definitions"
   ],
   "exclude": ["lib/index.test-d.ts"]
 }

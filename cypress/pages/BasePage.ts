@@ -1,13 +1,12 @@
 export class BasePage {
-    constructor() {
-    }
+  constructor () {
+  }
 
-    checkCurrentUrlIsTheExpected(url: string) {
-        cy.url().should("eq",url)
-    }
+  checkCurrentUrlIsTheExpected (url: string): void {
+    cy.url().should('eq', url)
+  }
 
-    checkPageWasFullyLoaded() {
-        //TODO: WIP
-    }
+  checkPageWasFullyLoaded (): void {
+    // TODO: WIP
+  }
 }
-

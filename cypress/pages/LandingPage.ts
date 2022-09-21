@@ -1,42 +1,43 @@
-import {BasePage} from "./BasePage";
+import { BasePage } from './BasePage'
 
 export class LandingPage extends BasePage {
-    constructor() {
-        super();
-    }
-    getMeThere() {
-        cy.visit('');
-    }
+  constructor () {
+    super()
+  }
 
-    scrollToBottom() {
-        cy.get(".mi-sections.footer").scrollIntoView();
-    }
+  getMeThere (): void {
+    cy.visit('')
+  }
 
-    closeTheBanner() {
-        cy.get(".ico-close").click();
-    }
+  scrollToBottom (): void {
+    cy.get('.mi-sections.footer').scrollIntoView()
+  }
 
-    expandSection(section: any) {
-        const possibleOptions: any = {
-            Anxiety: "Anxiety",
-        }
-        if (!possibleOptions[section]) {
-            throw new Error("Invalid section!");
-        }
-        cy.get("div.faq1_component").contains(possibleOptions[section]).click();
-    }
+  closeTheBanner (): void {
+    cy.get('.ico-close').click()
+  }
 
-    isTheBannerClosed() {
-        cy.get('.ico-close').should('not.be.visible')
+  expandSection (section: any): void {
+    const possibleOptions: any = {
+      Anxiety: 'Anxiety'
     }
+    if (!(possibleOptions[section])) {
+      throw new Error('Invalid section!')
+    }
+    cy.get('div.faq1_component').contains(possibleOptions[section]).click()
+  }
 
-    checkDiagnosisDescription(elements : string[]) {
-        const options = elements[0].split(", ")
-        options.forEach(el=> cy.get('.mi-p-22.small-margin')
-            .contains(el).should('be.visible'))
-    }
+  isTheBannerClosed (): void {
+    cy.get('.ico-close').should('not.be.visible')
+  }
 
-    goToLocationsSection() {
-        cy.get(".w-nav-link").contains("Locations").click();
-    }
+  checkDiagnosisDescription (elements: string[]): void {
+    const options = elements[0].split(', ')
+    options.forEach(el => cy.get('.mi-p-22.small-margin')
+      .contains(el).should('be.visible'))
+  }
+
+  goToLocationsSection (): void {
+    cy.get('.w-nav-link').contains('Locations').click()
+  }
 }
