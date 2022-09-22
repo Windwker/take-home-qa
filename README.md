@@ -21,7 +21,9 @@ Although the user can see a brief report at the console itself, after running th
 - Each scenario in the feature file should be tagged with the environment tag i.e:@production
 - Run the related script based on tags i.e: npm run cypress:staging. This will run only tests that are candidate to that environment. Also , in the script, a node variable can be passed through a CI tool to choose which environment to use and to provide integration
 
-
+### Running tests for different devices
+Although the tests provided in the solution of the challenge are executed both mobile and desktop, the fancy way to do this is by receiving a 
+parameter in the script in order to be used as a node.env variable indicating to run in mobile or desktop and then use a Strategy pattern to return the mobile / desktop version of the page based in POM
 
 
 
