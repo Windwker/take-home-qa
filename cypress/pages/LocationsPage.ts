@@ -1,8 +1,8 @@
 import { BasePage } from './BasePage'
 
 export class LocationsPage extends BasePage {
-  constructor () {
-    super()
+  constructor (device: string) {
+    super(device)
   }
 
   sortLocations (value: string): void {

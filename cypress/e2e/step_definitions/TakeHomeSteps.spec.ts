@@ -4,11 +4,7 @@ import { LandingPage } from '../../pages/LandingPage'
 
 let landingPage: LandingPage
 let locationsPage: LocationsPage
-
-Given(/^the user attempts to access to the Minded landing page$/, function () {
-  landingPage = new LandingPage()
-  landingPage.getMeThere()
-})
+let deviceSelected: string
 
 When(/^the user scrolls to the bottom$/, function () {
   landingPage.scrollToBottom()
@@ -29,7 +25,7 @@ When(/^the user expands (.*) section$/, function (section: string) {
 })
 When(/^the user access to the location section$/, function () {
   landingPage.goToLocationsSection()
-  locationsPage = new LocationsPage()
+  locationsPage = new LocationsPage(deviceSelected)
 })
 When(/^the user applies the order (.*) to the location list$/, function (order: string) {
   locationsPage.sortLocations(order)
@@ -42,4 +38,10 @@ Then(/^the user is redirected to the selected location page (.*)$/, function (ur
 })
 Then(/^the user should see that the Minded landing page loaded successfully$/, function () {
   landingPage.checkPageWasFullyLoaded()
+})
+
+Given(/^the user attempts to access to the Minded landing page using (.*)$/, function (device: string) {
+  deviceSelected = device
+  landingPage = new LandingPage(device)
+  landingPage.getMeThere()
 })

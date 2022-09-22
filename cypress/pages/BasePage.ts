@@ -1,12 +1,30 @@
 export class BasePage {
-  constructor () {
+  device: any = undefined
+  constructor (device: string) {
+    console.log(device)
+    const devices: any = {
+      mobile: {
+        width: 390,
+        height: 844
+      },
+      desktop: {
+        width: 1920,
+        height: 1080
+      }
+    }
+
+    this.device = device
+    if (!devices[device]) {
+      throw new Error('Invalid option!')
+    }
+    cy.viewport(devices[device].width, devices[device].height)
   }
 
   checkCurrentUrlIsTheExpected (url: string): void {
     cy.url().should('eq', url)
   }
 
-  checkPageWasFullyLoaded (): void { // the cy.visit() already performs this action. It ensure the onLoad event is triggered before heading to next test step
-    cy.get('.mi-div-menu-nav').should('be.visible')
+  getDevice (): string {
+    return this.device
   }
 }

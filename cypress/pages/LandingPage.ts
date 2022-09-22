@@ -1,7 +1,12 @@
 import { BasePage } from './BasePage'
+
 export class LandingPage extends BasePage {
-  constructor () {
-    super()
+  constructor (device: string) {
+    super(device)
+  }
+
+  checkPageWasFullyLoaded (): void { // the cy.visit() already performs this action. It ensure the onLoad event is triggered before heading to next test step
+    cy.get('#how-it-works .mi-headings-w.medium-size').should('be.visible')
   }
 
   getMeThere (): void {
@@ -37,6 +42,10 @@ export class LandingPage extends BasePage {
   }
 
   goToLocationsSection (): void {
+    if (this.getDevice() === 'mobile') {
+      cy.get('.mi-hamb-mob').click()
+    }
+
     cy.get('.w-nav-link').contains('Locations').click()
   }
 }
