@@ -1,3 +1,33 @@
+# Take home test for Javier Alvarez
+### Changelog.
+- Forked from the original repository as requested
+- Installed and configured Cypress framework + Cucumber
+- Opened a pull request in order to get feedback from reviewers
+- Did small commits for each project building objective
+- Implemented mochawesome as reporting tool
+- Implemented linter.
+- Added several test cases to feature file in order to achieve the assignment
+
+### How to run
+- Make sure to get the latest version from the repository
+- Install all the dependencies : npm i
+- In the terminal/console , run i.e: npm run cypress:production
+  (check package.json for all the available scripts)
+
+### How to check the report
+Although the user can see a brief report at the console itself, after running the tests with the stated scripts, head to /cypress/report/mochawesome-report and open the .html report on a browser
+
+### How to interact with environments
+- Each scenario in the feature file should be tagged with the environment tag i.e:@production
+- Run the related script based on tags i.e: npm run cypress:staging. This will run only tests that are candidate to that environment. Also , in the script, a node variable can be passed through a CI tool to choose which environment to use and to provide integration
+
+### Running tests for different devices
+Although the tests provided in the solution of the challenge are executed both mobile and desktop, the fancy way to do this is by receiving a 
+parameter in the script in order to be used as a node.env variable indicating to run in mobile or desktop and then use a Strategy pattern to return the mobile / desktop version of the page based in POM
+
+
+
+
 # Take home test for QA Engineer
 
 The main goal of this test is to evaluate your code organization, maintainability, and readability; We don’t expect you to complete all cases, with one or two well-documented and explained cases will be enough.
